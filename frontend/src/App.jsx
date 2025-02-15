@@ -14,6 +14,7 @@ import Login from './Components/Login';
 import Profile from './Components/Profile';
 import AboutPage from './Components/About';
 import FeaturesSection from './Components/FeatureSection';
+import Footer from './Components/Footer';
 
 function App() {
 
@@ -122,20 +123,26 @@ export function Hero() {
 
   return (
     <>
-      <div className="flex flex-col items-center gap-5 border-b p-2 py-5 ">
+      <div className="flex flex-col items-center gap-5 border-b p-2  ">
         <div className="flex justify-around items-center w-full">
           <div className="h-fit">
             <img src={hero} className="h-full" alt="hero" />
           </div>
 
           <div className="text-center flex flex-col items-center">
-            <SavingsIcon className="text-[#191A19]" sx={{ fontSize: "7rem" }} />
+            <div className='flex justify-center items-center'>
+              
+              <SavingsIcon className='text-[#191A19]' sx={{ fontSize: '9rem' }} />
+              {/* <h1 className='text-[50px] font-extrabold text-[#191A19]'>Share Pool</h1>  */}
+            </div>
+            
+
             <h1 className="font-bold text-[50px] text-[#191A19]">Lend, Borrow, Grow Together!</h1>
 
             {pools.length === 0 && (
               <button
                 onClick={() => setShowOverlay(true)}
-                className="flex items-center h-[75px] gap-2 bg-[#4E9F3D] text-white font-semibold text-lg px-5 py-2 mt-4 rounded-lg shadow-md hover:scale-105 transition-transform duration-300"
+                className="flex items-center h-[65px] gap-2 bg-[#4E9F3D] text-[20px] text-white font-semibold text-lg px-5 py-2 mt-10 rounded-full shadow-md hover:scale-105 transition-transform duration-300"
               >
                 <AddIcon className="h-6 w-6 " />
                 <h1>Create Pool</h1>
@@ -146,7 +153,7 @@ export function Hero() {
       </div>
 
       {pools.length > 0 && (
-        <div className="pools-container flex flex-col items-center pb-5 bg-[#FCF7F8]">
+        <div className="pools-container flex flex-col items-center pb-5 bg-[#f0c77b71]">
           <h2 className="font-bold text-[40px] mb-3">Your Pools</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 place-items-center">
             {pools.map((pool, index) => (
@@ -176,6 +183,7 @@ export function Home(){
     
     <Hero />
     <FeaturesSection/>
+    <Footer/>
     </>
     
   )
