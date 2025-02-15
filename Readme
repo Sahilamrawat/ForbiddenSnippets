@@ -1,16 +1,67 @@
-setting up the react project
-    npm create vite@latest my-app     
+SHARE POOL
+Theme: Future of banking
+Problem Statement
+Access to formal banking systems and collateral-based loans remains a challenge. Traditional financial institutions require extensive documentation and collateral, making it difficult for individuals in need to access timely financial assistance. To address this, we propose the development of a community-based pool system within a website, where people who already know each other (such as family members, relatives, or trusted community members) can contribute money and provide financial support to those in need.
 
+MAIN IDEA (with all features):
+To create a pool system in an app in which people can contribute money in which interest rate will be based on defined slabs . People present in the pool can pick the amount according to their need and priority level set in the app on the basis of user history. In cases of frauds, users must have at least 2 bank accounts linked in the app (including the one in which salary is credited) so that auto deduction takes place after a specific deadline. Initially a person’s eligibility will be set on the basis of the profile created that includes bank balance sheets, current occupation, current tax paying, ITR etc. 
+note: our app is mainly focused for family and relatives or people who already know each other. Our motive is to allow people create pools on the platform so that they can avail money at low interest rate and without collateral. 
+The system will offer:
+A Community-Based Money Pool – Members contribute funds into a shared pool.
+Need-Based Borrowing – Borrowing is prioritized based on financial need and user history.
+Interest Rate Slabs – Borrowers pay interest based on predefined slabs that cater to their financial profile.
+Auto Deduction & Fraud Prevention – Borrowers must link at least two bank accounts, and auto-deduction will be triggered after the repayment deadline. The app will provide fraud protection.
+Eligibility Assessment – Initial eligibility is determined based on bank balance sheets, occupation, tax records, and ITR filings.
+This system is especially designed for rural and underprivileged individuals who may not have access to collateral-based loans and require an affordable, trust-based lending system.
 
-setting up the routes
-    npm install react-router-dom
+Solution Approach
+1. User Registration and Profile Verification
+Users sign up with basic details.
+Two linked bank accounts are mandatory.
+Profile verification based on financial data:
+Bank balance statements
+Employment status & income proof
+Tax history (if applicable)
+Existing loans or debts (if any)
+2. Pool Creation & Contributions
+Users can create or join a pool with trusted individuals.
+Contributions to the pool are flexible, and members can contribute regularly or as per availability.
+A trust score is calculated for each user based on their contribution history and repayment behavior.
+3. Borrowing Mechanism & Priority System
+Users request an amount from the pool based on their need.
+Borrowing priority is determined by:
+Urgency of request (health emergencies, educational needs, etc.)
+Trust score & repayment history
+Previous borrowing behavior (timely repayments increase priority, while defaults decrease it)
+Contribution history (those who contribute more may get higher borrowing priority)
+4. Interest Rate Slabs
+To ensure fair lending, interest rates will be set based on predefined slabs:
+Slab 1 (Low-Interest): For individuals with low income, first-time borrowers, or those from underprivileged backgrounds.
+Slab 2 (Moderate-Interest): For users with stable income but average borrowing history.
+Slab 3 (Higher-Interest): For users who have previously delayed payments or are borrowing higher amounts frequently.
+The interest rate is calculated dynamically and adjusted based on the borrower's profile and repayment behavior.
+5. Repayment & Auto Deduction
+Borrowers set a repayment deadline while taking a loan.
+On the due date, auto deduction happens from their linked bank accounts.
+If the primary account lacks sufficient funds, the second account is debited.
+If repayment fails, the borrower gets a grace period with an added penalty before further actions are taken.
+6. Fraud Prevention & Legal Actions
+If a borrower fails to return the money:
+Their trust score drops, making future borrowing harder.
+Legal action can be initiated within the app with automated case filing.
+Relaxation options are available in exceptional cases (e.g., medical emergencies, job loss).
+7. Rural & Underprivileged Support Features
+No Collateral Requirement – Unlike banks, this system does not require assets for loan approval.
+Low-Interest Loans for Rural Borrowers – Interest rates for financially weaker sections are subsidized.
+Localized Support – Available in multiple languages with offline access for low-network areas.
+Financial Literacy Module – Provides borrowers with educational resources on money management and savings.
 
-    include this in App.jsx file
-        import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+Conclusion
+This trust-based community lending system provides a safe, accessible, and fair financial solution for families, relatives, and small communities. By integrating priority-based lending, flexible interest rates, and fraud prevention mechanisms, the app ensures that people can get financial help when needed without the complexities of formal banking. The inclusion of auto deduction and legal protection makes it secure for contributors.
 
-WORKING with the tailwind
+Team Name - Forbidden Snippets
+Ronak Gupta - ronak7105
+Sahil Amrawat- Sahilamrawat
+Yashasvi - yashasvi0904
+vaibhav sorot - vaibhavsorot
 
-    Run the following command to install Tailwind CSS and its dependencies:
-        npm install -D tailwindcss postcss autoprefixer
-    Generate the Tailwind configuration files:
-        npx tailwindcss init
