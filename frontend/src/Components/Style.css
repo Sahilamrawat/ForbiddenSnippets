@@ -11,3 +11,11 @@
 .List-Items:hover {
     text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 100px #fff;
 }
+.cards:hover{
+    background-color: #2E507730;
+    cursor: pointer;
+  }
+  .cards-white:hover{
+    background-color: #c5c5c530;
+    cursor: pointer;
+  }
