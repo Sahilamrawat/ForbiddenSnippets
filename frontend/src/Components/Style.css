@@ -1,0 +1,13 @@
+.Sign-In-btn:hover {
+    box-shadow: 0 0 10px #1E5128, 0 0 20px #1E5128, 0 0 50px #1E5128;
+    
+}
+.Sign-In-btn {
+    transition: box-shadow 0.4s ease-in-out; /* Apply transition to base state */
+}
+.List-Items{
+    transition: text-shadow 0.3s ease-in-out;
+}
+.List-Items:hover {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 100px #fff;
+}

@@ -1,0 +1,16 @@
+setting up the react project
+    npm create vite@latest my-app     
+
+
+setting up the routes
+    npm install react-router-dom
+
+    include this in App.jsx file
+        import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
+WORKING with the tailwind
+
+    Run the following command to install Tailwind CSS and its dependencies:
+        npm install -D tailwindcss postcss autoprefixer
+    Generate the Tailwind configuration files:
+        npx tailwindcss init
