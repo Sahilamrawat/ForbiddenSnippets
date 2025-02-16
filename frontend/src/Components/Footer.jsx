@@ -24,16 +24,16 @@ function Footer() {
                 <div className="mx-auto flex flex-col items-start text-start mt-5">
                     <h6 className="text-uppercase mb-4 font-weight-bold hover:text-[#2E5077] hover:scale-110 transition-transform duration-500">Services</h6>
                     <p className='hover:text-blue-700 cursor-pointer'>
-                    <a onClick={()=>navigate('/send-money')}>View Pool</a>
+                    <a onClick={()=>navigate('/view-pools')}>View Pool</a>
                     </p>
                     <p className='hover:text-blue-700 cursor-pointer'>
-                    <a onClick={()=>navigate('/recharge')} >My Wallet</a>
+                    <a onClick={() => navigate("/profile", { state: { activeIndex: 1 } })} >My Wallet</a>
                     </p>
                     <p className='hover:text-blue-700 cursor-pointer'>
-                    <a onClick={()=>navigate('/travel')} >View History</a>
+                    <a onClick={() => navigate("/profile", { state: { activeIndex: 2 } })} >View History</a>
                     </p>
                     <p className='hover:text-blue-700 cursor-pointer'>
-                    <a onClick={()=>navigate('/travel')} >View Deadlines</a>
+                    <a onClick={() => navigate("/profile", { state: { activeIndex: 3 } })}>View Deadlines</a>
                     </p>
                     
                 </div>
@@ -45,7 +45,7 @@ function Footer() {
                     Useful links
                     </h6>
                     <p className='hover:text-blue-700 cursor-pointer'>
-                    <a onClick={() => navigate('/wallet?activeIndex=0')} >Profile</a>
+                    <a onClick={() => navigate("/profile", { state: { activeIndex: 0 } })} >Profile</a>
                     </p>
                     
                     <p className='hover:text-blue-700 cursor-pointer'>
