@@ -19,11 +19,14 @@ function Login() {
 
   return (
     <div className="flex justify-center items-center min-h-screen bg-slate-100">
-      <div className="bg-[#eeefa8c6] h-[80vh] w-[50vw] flex items-center  rounded-lg shadow-lg">
+      <div className=" h-max w-[45vw] flex items-center  rounded-lg shadow-lg bg-white">
         
         {/* Form Section */}
         <div className="bg-white flex flex-col items-center justify-center rounded-lg shadow-lg h-[100%] w-[100%] max-w-md">
-            <SavingsIcon className='text-[#191A19]' sx={{ fontSize: '7rem' }} />
+            <div className="flex items-center gap-2 mt-4">
+            <SavingsIcon className='text-[#191A19]' sx={{ fontSize: '6rem' }} />
+            <h1 className='ml-2 font-bold text-[38px]'>Share Pool</h1>
+            </div>
           <h2 className="text-2xl font-bold text-center text-[#2E5077] mb-4">Login</h2>
           <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
             
@@ -58,13 +61,13 @@ function Login() {
             </div>
 
             {/* Submit Button */}
-            <button type="submit" className="w-full bg-[#2E5077] text-white p-2 rounded-lg font-semibold hover:bg-[#1F3A5F]">
+            <button type="submit" className="w-full bg-[#191A19] text-white p-2 rounded-lg font-semibold hover:bg-[#48823d]">
               Login
             </button>
           </form>
 
           {/* Signup Link */}
-          <p className="mt-4 text-center text-gray-600">
+          <p className="mt-4 mb-10 text-center text-gray-600">
             Don't have an account? 
             <span 
               className="text-blue-500 cursor-pointer ml-1 hover:underline"

@@ -2,6 +2,7 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import signup from "../assets/sign-up.svg";
 import { useNavigate } from "react-router-dom";
+import SavingsIcon from '@mui/icons-material/Savings';
 function SignIn() {
     const navigate = useNavigate();
   const {
@@ -17,10 +18,10 @@ function SignIn() {
 
   return (
     <div className="flex justify-center items-center min-h-screen bg-slate-100 ">
-        <div className="bg-[#eeefa8c6] flex items-center  rounded-lg shadow-lg">
+        <div className=" flex items-center  rounded-lg shadow-lg bg-white">
             
             <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
-                <h2 className="text-2xl font-bold text-center text-[#2E5077] mb-4">
+                <h2 className="text-2xl font-bold text-center text-[#4E9F3D] mb-4">
                 Sign Up
                 </h2>
                 <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
@@ -84,12 +85,16 @@ function SignIn() {
                 </div>
 
                 {/* Submit Button */}
-                <button type="submit" className="w-full bg-[#2E5077] text-white p-2 rounded-lg font-semibold hover:bg-[#1F3A5F]">
+                <button type="submit" className="w-full bg-[#191A19] text-white p-2 rounded-lg font-semibold hover:bg-[#48823d]">
                     Sign Up
                 </button>
                 </form>
             </div>
-            <div>
+            <div className="flex flex-col items-center justify-center">
+                <div className='Logo-Container flex items-center cursor-pointer' onClick={()=>navigate('/')}>
+                    <SavingsIcon sx={{ fontSize: '5rem' }} />
+                    <h1 className='ml-2 font-bold text-[38px]'>Share Pool</h1>
+                </div>
                 <img src={signup}  className='login-logo w-[600px] h-max  bg-white ' alt="image" />
             </div>
         </div>

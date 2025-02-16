@@ -98,7 +98,7 @@ function ViewPools() {
     <>
     <Navheader/>
     <div className=" p-6 text-white h-max">
-      <h2 className="text-3xl font-bold mb-6 text-center text-black">Available Pools</h2>
+      <h2 className="text-3xl font-bold mb-6 text-center text-black">My Pools</h2>
       <div className="flex flex-wrap justify-center">
         {pools.map((pool, index) => (
           <PoolCard key={index} pool={pool} onClick={setSelectedPool} />

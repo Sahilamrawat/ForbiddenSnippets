@@ -15,7 +15,7 @@ const Profile = () => {
     }
   }, [location.state?.activeIndex]);
 
-  const menuItems = ["Personnel Data", "My Wallet", "View History", "View Deadlines", "Home"];
+  const menuItems = ["Personnel Data", "My Wallet", "View History", "View Deadlines", "Home","Logout"];
 
   const renderComponent = () => {
     switch (activeIndex) {
@@ -51,7 +51,10 @@ const Profile = () => {
                 onClick={() => {
                   if (index === 4) {
                     navigate("/"); // Redirect to Home if "Home" is clicked
-                  } else {
+                  }else if(index===5){
+                    navigate("/signin");
+                  }
+                   else {
                     setActiveIndex(index); // Manually update active index
                   }
                 }}
