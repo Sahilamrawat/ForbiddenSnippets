@@ -27,7 +27,7 @@ function FeaturesSection() {
 
           <div
             className="cards w-[200px] flex flex-col justify-center items-center gap-1 py-5 px-5 rounded-[10px] text-white"
-            onClick={() => navigate("/wallet")}
+            onClick={() => navigate("/profile", { state: { activeIndex: 1 } })}
           >
             <div className="bg-white w-20 flex justify-center items-center h-20 rounded-full">
               <FaWallet className="text-[40px] text-[#4E9F3D]" />
@@ -37,7 +37,7 @@ function FeaturesSection() {
 
           <div
             className="cards w-[200px] flex flex-col justify-center items-center gap-1 py-5 px-5 rounded-[10px] text-white"
-            onClick={() => navigate("/history")}
+            onClick={() => navigate("/profile", { state: { activeIndex: 2 } })}
           >
             <div className="bg-white w-20 flex justify-center items-center h-20 rounded-full">
               <FaHistory className="text-[40px] text-[#4E9F3D]" />
@@ -47,7 +47,7 @@ function FeaturesSection() {
 
           <div
             className="cards w-[200px] flex flex-col justify-center items-center gap-1 py-5 px-5 rounded-[10px] text-white"
-            onClick={() => navigate("/deadlines")}
+            onClick={() => navigate("/profile", { state: { activeIndex: 3 } })}
           >
             <div className="bg-white w-20 flex justify-center items-center h-20 rounded-full">
               <MdOutlineEventNote className="text-[40px] text-[#4E9F3D]" />

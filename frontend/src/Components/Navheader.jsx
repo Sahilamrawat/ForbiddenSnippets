@@ -8,7 +8,7 @@ import './Style.css'
 function Navheader() {
     const navigate = useNavigate();
     return (
-      <div className='Nav-Container bg-[#191A19] w-full min-h-[5vh] text-white flex items-center justify-between px-10 py-4 flex-wrap'>
+      <div className='Nav-Container bg-[#191A19] w-full min-h-[5vh] text-white flex items-center justify-between px-10 py-4 flex-wrap sticky top-0 z-10'>
         
         {/* Grouped logo, name, and navigation items */}
         <div className='flex items-center gap-10'>

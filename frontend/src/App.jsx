@@ -11,10 +11,11 @@ import SavingsIcon from '@mui/icons-material/Savings';
 import TermsAndCondition from './Components/TermsAndCondition';
 import SignIn from './Components/SignIn';
 import Login from './Components/Login';
-import Profile from './Components/Profile';
+import Profile, { MyWallet } from './Components/Profile';
 import AboutPage from './Components/About';
 import FeaturesSection from './Components/FeatureSection';
 import Footer from './Components/Footer';
+import ViewPools from './Components/ViewPools';
 
 function App() {
 
@@ -28,6 +29,7 @@ function App() {
           <Route path="/login" element={<Login/>}/>
           <Route path="/profile" element={<Profile/>}/>
           <Route path="/about" element={<AboutPage/>}/>
+          <Route path="/view-pools" element={<ViewPools/>}/>
         </Routes>
       </BrowserRouter>
     </div>
